@@ -1,0 +1,2 @@
+Add this to VM option in run configuration:
+--module-path C:\javafx-sdk-21.0.8\lib --add-modules javafx.controls,javafx.fxml

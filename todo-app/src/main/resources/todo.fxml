@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TodoController">
+    <HBox prefHeight="78.0" prefWidth="248.0">
+        <TextFlow>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="244.0" rotate="-11.3" text="TODO List">
+                <font>
+                    <Font size="32.0" />
+                </font>
+            </Label>
+        </TextFlow>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="5">
+        <TextField fx:id="inputField" promptText="Enter todo..." HBox.hgrow="ALWAYS" />
+        <Button fx:id="addButton" text="+" />
+    </HBox>
+
+    <ListView fx:id="listView" VBox.vgrow="ALWAYS" />
+
+</VBox>
