@@ -1,26 +1,16 @@
-version: '3.8'
-
 services:
   db:
-    image: postgres:15
-    container_name: todo-db
+    image: postgres:16
+    container_name: docker-todo-db
+    restart: always
     environment:
       POSTGRES_USER: todo_user
       POSTGRES_PASSWORD: todo_pass123
       POSTGRES_DB: todo_db
     ports:
-      - "5432:5432"
+      - "8888:5432"
     volumes:
       - todo-data:/var/lib/postgresql/data
-
-  app:
-    build: .
-    depends_on:
-      - db
-    environment:
-      DB_URL: jdbc:postgresql://db:5432/todo_db
-    stdin_open: true
-    tty: true
 
 volumes:
   todo-data:

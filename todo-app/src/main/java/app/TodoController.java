@@ -31,7 +31,7 @@ public class TodoController {
     }
 
     private void initDatabase() {
-        String url = "jdbc:postgresql://db:5432/todo_db";
+        String url = "jdbc:postgresql://localhost:8888/todo_db";
         String todoUser = "todo_user";
         String todoPass = "todo_pass123";
         try {
